@@ -3,11 +3,9 @@
         <h2>Products</h2>
         <div class="grid grid-cols-4 gap-5">
             <div v-for="p in products">
-                <NuxtLink :to="`/products/${p.id}`">{{ p.title }}</NuxtLink>
+                <ProductCard :product="p" />
             </div>
         </div>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse facere odit sed placeat. Eveniet, dolorum quae magnam officiis eius tempore?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nostrum!</p>
     </div>
 </template>
 
