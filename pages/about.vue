@@ -3,15 +3,19 @@
         <h2>About</h2>  
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse facere odit sed placeat. Eveniet, dolorum quae magnam officiis eius tempore?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nostrum!</p>
-        <div>{{ data }}</div>
+        <div>{{ me }}</div>
+        <div>{{ currency }}</div>
+        
     </div>
 </template>
 
 <script setup>
-    const { data } = await useFetch('/api/rocker?name=Suzy', {
+    const { data: me } = await useFetch('/api/rocker?name=Suzy', {
         method: 'post',
         body: { age: 30 }
     })
+
+    const { data: currency } = await useFetch('/api/currency/GBP')
 </script>
 
 <style scoped>
