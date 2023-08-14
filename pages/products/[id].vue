@@ -1,5 +1,9 @@
 <template>
     <div>
+        <Head>
+            <Title>Nuxt Rocks! | {{ product.title }}</Title>
+            <Meta name="description" :content="product.description" />
+        </Head>
         <ProductDetails :product="product" />
     </div>
 </template>
