@@ -1,13 +1,17 @@
 <template>
     <div>
-        <h2>About</h2>
+        <h2>About</h2>  
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse facere odit sed placeat. Eveniet, dolorum quae magnam officiis eius tempore?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nostrum!</p>
+        <div>{{ data }}</div>
     </div>
 </template>
 
 <script setup>
-
+    const { data } = await useFetch('/api/rocker?name=Suzy', {
+        method: 'post',
+        body: { age: 30 }
+    })
 </script>
 
 <style scoped>
